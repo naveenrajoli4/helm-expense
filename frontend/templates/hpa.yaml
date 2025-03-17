@@ -1,8 +1,8 @@
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
-  name: frontend
-  namespace: expense
+  name: frontend-hpa
+  namespace: rnk-expense-vol
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
