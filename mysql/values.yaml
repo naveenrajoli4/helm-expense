@@ -7,6 +7,6 @@ intservice:
 statefulset:
   name: mysql
   repilicas: 2
-  imageversion: 1.0
+  imageversion: "1.0"
   storage: 1Gi
 
