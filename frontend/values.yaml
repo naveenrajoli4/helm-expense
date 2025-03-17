@@ -1,0 +1,8 @@
+deployment:
+  imageversion: 1.2
+hpa:
+  utilisation: 5
+service:
+  port: 80
+  targetport: 8080
+
