@@ -1,0 +1,12 @@
+headlessservice:
+  port: 3306
+  targetport: 3306
+intservice:
+  port: 3306
+  targetport: 3306
+statefullset:
+  name: mysql
+  repilicas: 2
+  imageversion: 1.0
+  storage: 1Gi
+

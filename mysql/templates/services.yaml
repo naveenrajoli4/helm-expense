@@ -1,0 +1,39 @@
+# Head less service 
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-headless-svc
+  namespace: rnk-expense-vol
+  labels:
+    app: mysql
+    project: expense
+    tire: database
+spec:
+  selector:
+    app: mysql
+    project: expense
+    tire: database
+  clusterIP: None  # Makes the service headless
+  ports:
+  - protocol: TCP
+    port: {{ .Values.headlessservice.port }}
+    targetPort: {{ .Values.headlessservice.targetport }}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mysql-svc
+  namespace: rnk-expense-vol
+  labels:
+    app: mysql
+    project: expense
+    tire: database
+spec: 
+  selector: # labels are used as selectors
+    app: mysql
+    project: expense
+    tire: database
+  ports:
+  - protocol: TCP
+    port: {{ .Values.intservice.port }} # service port
+    targetPort: {{ .Values.intservice.targetport }}
