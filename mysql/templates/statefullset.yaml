@@ -22,7 +22,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: mysql
-        image: naveenrajoli/mysql:"{{ .Values.statefulset.imageversion }}"
+        image: naveenrajoli/mysql:{{ .Values.statefulset.imageversion }}
         volumeMounts:
         - name: mysql-vol
           mountPath: /var/lib/mysql
