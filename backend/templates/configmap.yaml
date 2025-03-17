@@ -4,4 +4,4 @@ metadata:
  name: backendconfigmap
  namespace: rnk-expense-vol
 data:
-  DB_HOST: {{ .Values.congigmap.db_host }}
+  DB_HOST: {{ .Values.configmap.db_host }}
